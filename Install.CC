@@ -13,7 +13,7 @@ if (Letter2Drive('C'))
 	"\nInstall to C:/ drive? ";
 	if (YorN)
 	{
-		Copy("DevInfo.CC",		"C:/Systemh/DevInfo.CC");
+		Copy("DevInfo.CC",		"C:/System/DevInfo.CC");
 		Copy("PCIDevices.DD",	"C:/Misc/PCIDevices.DD");
 	}
 }
@@ -23,7 +23,7 @@ if (Letter2Drive('D'))
 	"\nInstall to D:/ drive? ";
 	if (YorN)
 	{
-		Copy("DevInfo.CC",		"D:/System/DevInfo.CC");
+		Copy("DevInfo.CC",		"D:/System/DevInfo.CC");
 		Copy("PCIDevices.DD",	"D:/Misc/PCIDevices.DD");
 	}
 }
