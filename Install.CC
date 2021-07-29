@@ -1,0 +1,36 @@
+/*
+
+Either run this script to install the updated list to
+the C: and D: drives, or manually copy the files from
+the disc to the correct folders.
+
+*/
+
+Cd(__DIR__);
+
+if (Letter2Drive('C'))
+{
+	"\nInstall to C:/ drive? ";
+	if (YorN)
+	{
+		Copy("DevInfo.CC",		"C:/Systemh/DevInfo.CC");
+		Copy("PCIDevices.DD",	"C:/Misc/PCIDevices.DD");
+	}
+}
+
+if (Letter2Drive('D'))
+{
+	"\nInstall to D:/ drive? ";
+	if (YorN)
+	{
+		Copy("DevInfo.CC",		"D:/System/DevInfo.CC");
+		Copy("PCIDevices.DD",	"D:/Misc/PCIDevices.DD");
+	}
+}
+
+"
+
+Reboot to ensure changes take effect.
+Kernel recompiling is not needed.
+
+";
