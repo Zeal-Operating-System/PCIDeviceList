@@ -69,13 +69,13 @@ U0 PCILookUpSingle(CDoc *doc, I64 m, I64 d, U8 **_vendor, U8 **_dev)
 				buf[6] = '\0';
 				if (Str2I64(buf) == m)
 				{
-					vendor = ZStrNew(doc_e->tag + 6);
+					vendor = SysStrNew(doc_e->tag + 6);
 					first = FALSE;
 					break;
 /*					doc_e = doc_e->next->next->next;
 					if (doc_e->type_u8 == DOCT_TEXT)
 					{
-						vendor = ZStrNew(doc_e->tag);
+						vendor = SysStrNew(doc_e->tag);
 						first = FALSE;
 						break;
 					}
@@ -105,12 +105,12 @@ U0 PCILookUpSingle(CDoc *doc, I64 m, I64 d, U8 **_vendor, U8 **_dev)
 						buf[6] = '\0';
 						if (Str2I64(buf) == d)
 						{
-							dev = ZStrNew(doc_e->tag + 6);
+							dev = SysStrNew(doc_e->tag + 6);
 							break;
 /*							doc_e = doc_e->next->next->next;
 							if (doc_e->type_u8 == DOCT_TEXT)
 							{
-								dev = ZStrNew(doc_e->tag);
+								dev = SysStrNew(doc_e->tag);
 								break;
 							}
 */						}
@@ -130,12 +130,12 @@ U0 PCILookUpSingle(CDoc *doc, I64 m, I64 d, U8 **_vendor, U8 **_dev)
 	if (vendor)
 		*_vendor = vendor;
 	else
-		*_vendor = ZStrNew("Unknown");
+		*_vendor = SysStrNew("Unknown");
 
 	if (dev)
 		*_dev = dev;
 	else
-		*_dev = ZStrNew("Unknown");
+		*_dev = SysStrNew("Unknown");
 }
 
 U0 PCILookUpDevs()
@@ -154,7 +154,7 @@ U0 PCILookUpDevs()
 				w1 = PCIReadU16(b, d, f, PCIR_VENDOR_ID);
 				if (w1 != 0xFFFF)
 				{
-					tmppci = ZCAlloc(sizeof(CPCIDev));
+					tmppci = SysCAlloc(sizeof(CPCIDev));
 					tmppci->bus = b;
 					tmppci->dev = d;
 					tmppci->fun = f;
@@ -315,3 +315,4 @@ public U0 MemPageRep()
 	"FIXED_AREA:%010X\n", SYS_FIXED_AREA;
 	"HEAP_BASE :%010X\nHEAP_LIMIT:%010X\n", mem_heap_base, mem_heap_limit;
 }
+
