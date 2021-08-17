@@ -2,7 +2,7 @@ This software is dual-licensed under the
 Unlicense and 3-clause BSD License.
 
 The "PCIDevices.DD" text file is licensed under the 3-Clause BSD License.
-It was downloaded from http://http://pci-ids.ucw.cz/v2.2/pci.ids,
+It was downloaded from https://pci-ids.ucw.cz/v2.2/pci.ids,
 processed, and renamed to "PCIDevices.DD".
 
 You may use all of this software, excluding the
@@ -38,4 +38,3 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 For more information, please refer to <https://unlicense.org>
 
-
