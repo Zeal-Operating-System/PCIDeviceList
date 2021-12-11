@@ -13,7 +13,7 @@ if (Letter2Drive('C'))
 	"\nInstall to C:/ drive? ";
 	if (YorN)
 	{
-		Copy("DevInfo.CC",		"C:/System/DevInfo.CC");
+		Copy("DevInfo.ZC",		"C:/System/DevInfo.ZC");
 		Copy("PCIDevices.DD",	"C:/Misc/PCIDevices.DD");
 	}
 }
@@ -23,7 +23,7 @@ if (Letter2Drive('D'))
 	"\nInstall to D:/ drive? ";
 	if (YorN)
 	{
-		Copy("DevInfo.CC",		"D:/System/DevInfo.CC");
+		Copy("DevInfo.ZC",		"D:/System/DevInfo.ZC");
 		Copy("PCIDevices.DD",	"D:/Misc/PCIDevices.DD");
 	}
 }
@@ -34,4 +34,3 @@ Reboot to ensure changes take effect.
 Kernel recompiling is not needed.
 
 ";
-
