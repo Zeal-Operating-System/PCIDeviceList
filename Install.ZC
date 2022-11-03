@@ -13,7 +13,7 @@ if (Letter2Drive('C'))
 	"\nInstall to C:/ drive? ";
 	if (YorN)
 	{
-		Copy("PCIRep.ZC",		"C:/System/Utils/PCIRep.ZC");
+		Copy("PCILookUpSingle.ZC",		"C:/System/PCILookUpSingle.ZC");
 		Copy("PCIDevices.DD",	"C:/Misc/PCIDevices.DD");
 	}
 }
@@ -23,7 +23,7 @@ if (Letter2Drive('D'))
 	"\nInstall to D:/ drive? ";
 	if (YorN)
 	{
-		Copy("PCIRep.ZC",		"D:/System/Utils/PCIRep.ZC");
+		Copy("PCILookUpSingle.ZC",		"D:/System/PCILookUpSingle.ZC");
 		Copy("PCIDevices.DD",	"D:/Misc/PCIDevices.DD");
 	}
 }
